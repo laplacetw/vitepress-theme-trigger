@@ -43,6 +43,6 @@ If there has any problem please feel free to create issue.
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
 
 ## Reference
-- [vuejs/blog: 📝 The official Vue.js blog](https://github.com/vuejs/blog)
+- [vuejs/blog](https://github.com/vuejs/blog)
 - [airene/vitepress-blog-pure](https://github.com/airene/vitepress-blog-pure)
 - [clark-cui/vitepress-blog-zaun](https://github.com/clark-cui/vitepress-blog-zaun)
