@@ -41,6 +41,28 @@ If there has any problem please feel free to create issue.
 
 ## Deploy
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
+- AWS Amplify
+```yml
+# amplify.yml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm use 18
+        - npm install -g pnpm
+        - pnpm install --no-frozen-lockfile
+    build:
+      commands:
+        - pnpm run build
+  artifacts:
+    baseDirectory: ./.vitepress/dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
 
 ## Reference
 - [vuejs/blog](https://github.com/vuejs/blog)
