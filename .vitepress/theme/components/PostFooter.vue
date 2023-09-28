@@ -31,19 +31,18 @@ function selectTag(tag: string) {
 <template>
   <div class='flex flex-wrap justify-center'>
     <a v-for='tag in frontmatter.tags' href='/tags#tagName' @click='selectTag(tag)'
-      class='justify-self-center text-gray-500 dark:text-gray-300'>
-      #<span class='font-medium underline decoration-2 decoration-sky-500 
-        cursor-pointer px-1'>{{ tag }}</span>
+      class='justify-self-center text-gray-500 dark:text-gray-300 my-1'>
+      <span class='theme-badge'>{{ tag }}</span>
     </a>
   </div>
   <div class='mt-5 md:flex'>
     <div class='text-center my-3 md:my-0 md:w-1/2' aria-label='previous post'>
-      <a class='theme-prev' :href='prevUrl' >
+      <a class='theme-prev' v-show='prevUrl' :href='prevUrl'>
         Prev : {{ prevTitle }}
       </a>
     </div>
     <div class='text-center my-3 md:my-0 md:w-1/2' aria-label='next post'>
-      <a class='theme-next' :href='nextUrl' >
+      <a class='theme-next' v-show='nextUrl' :href='nextUrl'>
         Next : {{ nextTitle }}
       </a>
     </div>

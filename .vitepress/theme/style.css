@@ -35,6 +35,11 @@
   @apply text-cyan-600 dark:text-cyan-300;
 }
 
+.theme-badge {
+  @apply bg-cyan-200 text-cyan-700 text-base font-medium 
+  mr-2 px-2.5 py-0.5 rounded dark:bg-cyan-700 dark:text-cyan-200;
+}
+
 .VPHome, .VPDoc {
   @apply pb-5 !important;
 }

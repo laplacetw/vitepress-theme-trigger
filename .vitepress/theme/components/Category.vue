@@ -14,9 +14,9 @@ function catSwitcher(cat: string) {  // 🐈🕹️
   <div class='theme-container'>
     <Title text='Category'/>
     <div class='flex flex-wrap'>
-      <a v-for='(posts, cat) in category' class='px-2' href='#catName' @click='catSwitcher(`${cat}`)'>
-        <span class='font-medium underline decoration-2 decoration-sky-500 cursor-pointer'>{{ cat }}</span> 
-        <sup class='p-0.5'>{{ posts.length }}</sup>
+      <a v-for='(posts, cat) in category' class='px-2 my-1' href='#catName' @click='catSwitcher(`${cat}`)'>
+        <span class='theme-badge'>{{ cat }}</span> 
+        <sup>{{ posts.length }}</sup>
       </a>
     </div>
     <hr class='h-px my-4 bg-gray-200 border-0 dark:bg-gray-500'>

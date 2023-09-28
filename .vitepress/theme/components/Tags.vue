@@ -14,9 +14,8 @@ function tagSwitcher(tag: string) {
   <div class='theme-container'>
     <Title text='Tags'/>
     <div class='flex flex-wrap'>
-      <a v-for='(posts, tag) in tags' class='px-2' href='#tagName' @click='tagSwitcher(`${tag}`)'>
-        <span class="font-medium underline decoration-2 decoration-sky-500 cursor-pointer">{{ tag }}</span> 
-        <sup class='p-0.5'>{{ posts.length }}</sup>
+      <a v-for='(_, tag) in tags' class='px-2 my-1' href='#tagName' @click='tagSwitcher(`${tag}`)'>
+        <span class='theme-badge'>{{ tag }}</span> 
       </a>
     </div>
     <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-500">
