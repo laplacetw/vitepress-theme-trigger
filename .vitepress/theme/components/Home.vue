@@ -26,8 +26,7 @@ function showPosts() {
               {{post.title}}
             </a>
           </h2>
-          <div v-if='post.excerpt' class='pb-8 prose dark:prose-invert 
-            max-w-none text-gray-500 dark:text-gray-300'
+          <div v-if='post.excerpt' class='theme-excerpt'
             v-html='post.excerpt'></div>
           <div class='grid text-base leading-6 font-medium'>
             <a class='theme-readmore' aria-label='read more' :href='post.url'>

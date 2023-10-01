@@ -11,6 +11,14 @@
   from-cyan-200 to-blue-600;
 }
 
+.theme-excerpt {
+  @apply pb-8 text-gray-500 dark:text-gray-300;
+}
+
+.theme-excerpt > p {
+  @apply truncate;
+}
+
 .theme-readmore {
   @apply px-4 py-1 justify-self-center shadow-lg shadow-cyan-500/50 
   rounded-md ring-1 ring-cyan-500 animate-pulse;
