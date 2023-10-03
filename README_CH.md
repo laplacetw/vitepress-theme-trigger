@@ -2,53 +2,52 @@
 ![Static Badge](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)
 
 # vitepress-theme-trigger
-Blog theme for [VitePress](https://vitepress.dev) with [Tailwind CSS](https://tailwindcss.com).
-- [中文 README](./README_CH.md)
+為建立部落格而生的 [VitePress](https://vitepress.dev) + [Tailwind CSS](https://tailwindcss.com) 主題
 
 ![](/public/preview.png)
-## Introduction
-"Trigger" is a out-of-the-box VitePress theme, named after my favorite Anime "[World Trigger](https://en.wikipedia.org/wiki/World_Trigger)". You can use it directly or customize it to better suit your needs.
+## 簡介
+「Trigger」是一個開箱即用的 VitePress 主題，以我很喜歡的漫畫作品 [World Trigger](https://en.wikipedia.org/wiki/World_Trigger) 命名。你可以直接使用它，或者根據需求或喜好進一步修改。
 
-More info about customization :
+有關自定義主題的資訊 :
 - [VitePress Doc - Using Vue in Markdown](https://vitepress.dev/guide/using-vue)
 - [VitePress Doc - Extending the Default Theme](https://vitepress.dev/guide/extending-default-theme)
 - [VitePress Doc - Build-Time Data Loading](https://vitepress.dev/guide/data-loading)
 
-If there has any problem please feel free to create issue.
+如果有任何問題，歡迎直接提issue。
 
-## Features
-- style with Tailwind CSS (RWD)
-- style for light / dark mode
-- pagination with History API
-- common use config integration
-- [utterances](https://utteranc.es) for blog comments
-- sync light / dark mode for utterances
-- MathJax style optimization for mobile
-- prev / next links without fontmatter setting
+## 主題特色
+- Tailwind CSS (響應式)
+- 淺色 / 深色主題切換
+- 文章列表分頁使用 History API
+- 整合常用網站 / 主題設定
+- 使用 [utterances](https://utteranc.es) 留言系統
+- utterances 同步切換淺色 / 深色主題
+- 針對行動裝置瀏覽改善 MathJax 樣式
+- 自動產生上一篇 / 下一篇連結(無需在fontmatter手動設定)
 
-## Prerequisite
-- [Node.js](https://nodejs.org) version 18 or higher.
+## 先決條件
+- [Node.js](https://nodejs.org) 版本最低需求為 18.0.0
 
-## Usage
-- Clone the project.
-- Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for personal use.
+## 如何使用
+- 複製或下載本主題
+- 根據個人需求編輯 [theme config](/.vitepress/theme/config.ts) 和 [public 資料夾](/public/)中的檔案
   - [VitePress Doc - Site Config](https://vitepress.dev/reference/site-config#site-config)
-- Start terminal and execute commands as follows :
+- 啟動命令行介面並執行以下指令 :
 ```shell
-# install devDependencies
+# 安裝依賴套件
 (p)npm install
 
-# start local dev server
+# 啟動本機伺服器
 (p)npm run dev
 
-# build for production
+# 打包APP
 (p)npm run build
 
-# Locally preview the production build
+# 預覽APP
 (p)npm run preview
 ```
 
-## Deploy
+## 部署
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
 - AWS Amplify
 ```yml
@@ -73,7 +72,7 @@ frontend:
       - node_modules/**/*
 ```
 
-## Reference
+## 參考
 - [vuejs/blog](https://github.com/vuejs/blog)
 - [airene/vitepress-blog-pure](https://github.com/airene/vitepress-blog-pure)
 - [clark-cui/vitepress-blog-zaun](https://github.com/clark-cui/vitepress-blog-zaun)

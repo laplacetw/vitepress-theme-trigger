@@ -1,4 +1,7 @@
 {
+  "name": "vitepress-theme-trigger",
+  "version": "1.0.0",
+  "author": "laplacetw",
   "type": "module",
   "pnpm": {
     "peerDependencyRules": {

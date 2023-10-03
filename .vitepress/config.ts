@@ -21,7 +21,7 @@ export default defineConfig({
     search: { provider: 'local' },
     footer: themeConfig.footer
   },
-  srcExclude: ['README.md'],
+  srcExclude: ['README.md', 'README_CH.md', 'CHANGELOG.md'],
   //https://vitepress.dev/guide/markdown#advanced-configuration
   markdown: {
     math: themeConfig.mdMath,
