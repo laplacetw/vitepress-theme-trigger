@@ -30,8 +30,8 @@ const themeConfig = {
   cacheDir: './node_modules/vitepress_cache',
   appearance: <Appearance>'dark',
   cleanUrls: true,
-  mdMath: true,
-  mdLineNums: true,
+  mdMath: true,  // math equations
+  mdLineNums: true,  // line numbers for code block
   // https://vitepress.dev/reference/default-theme-config
   nav: [
     { text: '🏠 Home', link: '/' },
