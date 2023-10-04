@@ -16,6 +16,7 @@
 如果有任何問題，歡迎直接提issue。
 
 ## 主題特色
+- 腳本自動建立新文章模板
 - Tailwind CSS (響應式)
 - 淺色 / 深色主題切換
 - 文章列表分頁使用 History API
@@ -36,6 +37,9 @@
 ```shell
 # 安裝依賴套件
 (p)npm install
+
+# 在/posts目錄下建立新文章
+(p)npm run new {new-post-filename}
 
 # 啟動本機伺服器
 (p)npm run dev

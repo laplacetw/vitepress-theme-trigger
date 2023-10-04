@@ -1,3 +1,9 @@
+# 2023-10-04
+
+### Features
+
+- add script for create new post
+
 # 2023-10-01
 
 ### Features
