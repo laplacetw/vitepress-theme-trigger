@@ -16,7 +16,7 @@
 如果有任何問題，歡迎直接提issue。
 
 ## 主題特色
-- 腳本自動建立新文章模板
+- 透過終端機指令建立新文章
 - Tailwind CSS (響應式)
 - 淺色 / 深色主題切換
 - 文章列表分頁使用 History API
@@ -33,7 +33,7 @@
 - 複製或下載本主題
 - 根據個人需求編輯 [theme config](/.vitepress/theme/config.ts) 和 [public 資料夾](/public/)中的檔案
   - [VitePress Doc - Site Config](https://vitepress.dev/reference/site-config#site-config)
-- 啟動命令行介面並執行以下指令 :
+- 啟動終端機執行以下指令 :
 ```shell
 # 安裝依賴套件
 (p)npm install

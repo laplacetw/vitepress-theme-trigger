@@ -17,7 +17,7 @@ More info about customization :
 If there has any problem please feel free to create issue.
 
 ## Features
-- script for create new post with template
+- create new post with CLI
 - style with Tailwind CSS (RWD)
 - style for light / dark mode
 - pagination with History API
@@ -39,7 +39,7 @@ If there has any problem please feel free to create issue.
 # install devDependencies
 (p)npm install
 
-# create new post with template under /posts
+# create new post under /posts
 (p)npm run new {new-post-filename}
 
 # start local dev server
