@@ -15,6 +15,9 @@
 
 如果有任何問題，歡迎直接提issue。
 
+## 更新日誌
+有關更新的細節都紀錄在 [CHANGELOG](./CHANGELOG.md)。
+
 ## 主題特色
 - 透過終端機指令建立新文章
 - Tailwind CSS (響應式)

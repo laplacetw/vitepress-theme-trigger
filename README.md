@@ -16,6 +16,9 @@ More info about customization :
 
 If there has any problem please feel free to create issue.
 
+## Changelog
+Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
+
 ## Features
 - create new post with CLI
 - style with Tailwind CSS (RWD)
