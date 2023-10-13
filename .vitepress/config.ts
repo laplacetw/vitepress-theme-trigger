@@ -6,6 +6,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: themeConfig.favicon }],
   ],
+  base: themeConfig.base,
   lang: themeConfig.lang,
   title: themeConfig.title,
   description: themeConfig.description,
