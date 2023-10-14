@@ -6,6 +6,7 @@ import { data as posts } from '../posts.data'
 import themeConfig from '../config'
 
 const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
+const tagsURL = `${root}/tags#tagName`
 const { frontmatter } = useData()
 let postIndex: number,
   prevIndex: number,
@@ -32,7 +33,7 @@ function selectTag(tag: string) {
 
 <template>
   <div class='flex flex-wrap justify-center'>
-    <a v-for='tag in frontmatter.tags' href='/tags#tagName' @click='selectTag(tag)'
+    <a v-for='tag in frontmatter.tags' :href='tagsURL' @click='selectTag(tag)'
       class='justify-self-center text-gray-500 dark:text-gray-300 my-1'>
       <span class='theme-badge'>{{ tag }}</span>
     </a>
