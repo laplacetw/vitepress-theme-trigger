@@ -4,6 +4,7 @@ import themeConfig from '../config'
 import blogStore from '../store'
 import { data as posts } from '../posts.data'
 
+const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
 const postsPerPage = themeConfig.postsPerPage
 
 function showPosts() {
@@ -22,14 +23,14 @@ function showPosts() {
           <PostInfo :date='post.date.string' :category='post.category' />
           <h2 class='pb-2 text-2xl leading-8 font-bold tracking-tight' 
             aria-label='post title'>
-            <a class='text-gray-900 dark:text-white' :href='post.url'>
-              {{post.title}}
+            <a class='text-gray-900 dark:text-white' :href='root + post.url'>
+              {{post.title}} 
             </a>
           </h2>
           <div v-if='post.excerpt' class='theme-excerpt'
             v-html='post.excerpt'></div>
           <div class='grid text-base leading-6 font-medium'>
-            <a class='theme-readmore' aria-label='read more' :href='post.url'>
+            <a class='theme-readmore' aria-label='read more' :href='root + post.url'>
               Read more
             </a>
           </div>

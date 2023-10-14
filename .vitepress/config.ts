@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress'
 import themeConfig from './theme/config'
 
+const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: [
-    ['link', { rel: 'icon', href: themeConfig.favicon }],
+    ['link', { rel: 'icon', href: root + themeConfig.favicon }],
   ],
   base: themeConfig.base,
   lang: themeConfig.lang,
