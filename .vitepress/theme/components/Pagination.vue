@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import { onMounted } from 'vue'
+import { withBase } from 'vitepress'
 import { data as posts } from '../posts.data'
 import themeConfig from '../config'
 import blogStore from '../store'
@@ -16,10 +18,12 @@ const totalPages = postsLength % postsPerPage === 0
 const totalBarLen = Math.ceil(totalPages / pageBarLen)
 
 // 1st page
-history.pushState({ page: blogStore.currentPage }, 'goPage()', '/')
-window.addEventListener('popstate', e => {
-  if (e?.state?.page) blogStore.currentPage = e.state.page
-});
+onMounted(() => {
+  history.pushState({ page: blogStore.currentPage }, 'goPage()', withBase('/'))
+  window.addEventListener('popstate', e => {
+    if (e?.state?.page) blogStore.currentPage = e.state.page
+  })
+})
 
 function genPages() {
   let start: number, end: number
@@ -44,7 +48,7 @@ function genPages() {
 
 function goPage(page: number) {
   blogStore.currentPage = page + 1
-  history.pushState({ page: page + 1 }, 'goPage()', '/')
+  history.pushState({ page: page + 1 }, 'goPage()', withBase('/'))
 }
 
 function showPages(action: string) {
