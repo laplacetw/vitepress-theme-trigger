@@ -57,6 +57,8 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 ```
 
 ## Deploy
+Our project includes the GitHub workflow. You just need to ensure that the [themeConfig.base](https://github.com/laplacetw/vitepress-theme-trigger/blob/main/.vitepress/theme/config.ts) is properly configured and GitHub pages auto-deployment will be triggered after push to GitHub.
+
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
 - AWS Amplify
 ```yml

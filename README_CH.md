@@ -55,6 +55,8 @@
 ```
 
 ## 部署
+我們的專案包含了GitHub workflow，你只需要確認[themeConfig.base](https://github.com/laplacetw/vitepress-theme-trigger/blob/main/.vitepress/theme/config.ts)設定正確，在推送到GitHub之後將會觸發GitHub pages的自動部署流程。
+
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
 - AWS Amplify
 ```yml
