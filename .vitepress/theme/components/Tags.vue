@@ -1,10 +1,9 @@
 <script setup lang='ts'>
+import { withBase } from 'vitepress';
 import blogStore from '../store'
 import { initTags } from '../utils'
 import { data as posts } from '../posts.data'
-import themeConfig from '../config'
 
-const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
 const tags = initTags(posts)
 
 function tagSwitcher(tag: string) {
@@ -24,7 +23,7 @@ function tagSwitcher(tag: string) {
     <h3 id='tagName' class='pb-2' v-show='blogStore.selectedTag'>🔖 {{ blogStore.selectedTag }}</h3>
     <dl class='' v-show='blogStore.selectedTag'>
       <a v-for='post in tags[blogStore.selectedTag]' target='_blank' 
-        class='decoration-2 hover:underline' :href='root + post.url'>
+        class='decoration-2 hover:underline' :href='withBase(post.url)'>
         <dd class='flex justify-between my-3 text-base leading-6 font-medium 
           text-gray-500 dark:text-gray-300'>
           <div class='truncate w-64 sm:w-fit'>{{ post.title }}</div>

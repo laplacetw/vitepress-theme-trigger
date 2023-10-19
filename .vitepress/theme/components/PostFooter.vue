@@ -1,12 +1,10 @@
 <script setup lang='ts'>
 import { watchEffect } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import blogStore from '../store'
 import { data as posts } from '../posts.data'
-import themeConfig from '../config'
 
-const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
-const tagsURL = `${root}/tags#tagName`
+const tagsURL = withBase('/tags#tagName')
 const { frontmatter } = useData()
 let postIndex: number,
   prevIndex: number,
@@ -19,10 +17,10 @@ let postIndex: number,
 watchEffect(() => {
   postIndex = posts.findIndex(post => post.title === frontmatter.value.title)
   prevIndex = postIndex > 0 ? postIndex - 1 : -1
-  prevUrl = prevIndex < 0 ? '' : root + posts[prevIndex].url
+  prevUrl = prevIndex < 0 ? '' : withBase(posts[prevIndex].url)
   prevTitle = prevIndex < 0 ? '' : posts[prevIndex].title
   nextIndex = postIndex < (posts.length - 1) ? postIndex + 1 : -1
-  nextUrl = nextIndex < 0 ? '' : root + posts[nextIndex].url
+  nextUrl = nextIndex < 0 ? '' : withBase(posts[nextIndex].url)
   nextTitle = nextIndex < 0 ? '' : posts[nextIndex].title
 })
 

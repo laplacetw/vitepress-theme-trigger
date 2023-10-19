@@ -1,10 +1,9 @@
 <script setup lang='ts'>
+import { withBase } from 'vitepress';
 import blogStore from '../store'
 import { initCategory } from '../utils'
 import { data as posts } from '../posts.data'
-import themeConfig from '../config'
 
-const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
 const category = initCategory(posts)
 
 function catSwitcher(cat: string) {  // 🐈🕹️
@@ -25,7 +24,7 @@ function catSwitcher(cat: string) {  // 🐈🕹️
     <h3 id='catName' class='pb-2' v-show='blogStore.selectedCat'>📁 {{ blogStore.selectedCat }}</h3>
     <dl v-show='blogStore.selectedCat'>
       <a v-for='post in category[blogStore.selectedCat]' target="_blank" 
-        class='decoration-2 hover:underline' :href='root + post.url'>
+        class='decoration-2 hover:underline' :href='withBase(post.url)'>
         <dd class='flex justify-between my-3 text-base leading-6 font-medium 
           text-gray-500 dark:text-gray-300'>
           <div class='truncate w-64 sm:w-fit'>{{ post.title }}</div>

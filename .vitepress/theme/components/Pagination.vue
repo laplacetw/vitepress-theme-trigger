@@ -73,23 +73,23 @@ function showPages(action: string) {
   <nav class='flex justify-center pt-6' v-show='totalPages > 1' aria-label='page navigation'>
     <ul class='flex'>
       <li>
-        <a class='theme-pagination rounded-l-lg' @click.prevent="showPages('prev')" href="#!">
+        <span class='theme-pagination rounded-l-lg' @click.prevent="showPages('prev')">
           <span class='sr-only'>Previous</span>
           <ChevronLeftIcon class='h-5 w-5' aria-hidden='true' />
-        </a>
+        </span>
       </li>
       <li v-for='page in genPages()'>
-        <a @click.prevent='goPage(page)' 
+        <span @click.prevent='goPage(page)' 
           :class="blogStore.currentPage === (page + 1) 
           ? 'theme-pagination-clicked theme-pagination' : 'theme-pagination'">
           {{ page + 1 }}
-        </a>
+        </span>
       </li>
       <li>
-        <a class='theme-pagination rounded-r-lg' @click.prevent="showPages('next')" href='#!'>
+        <span class='theme-pagination rounded-r-lg' @click.prevent="showPages('next')">
           <span class='sr-only'>Next</span>
           <ChevronRightIcon class='h-5 w-5' aria-hidden='true' />
-        </a>
+        </span>
       </li>
     </ul>
   </nav>

@@ -21,7 +21,17 @@ export default defineConfig({
     nav: themeConfig.nav,
     logo: themeConfig.logo,
     socialLinks: themeConfig.socialLinks,
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+        _render: (src, env, md) => {
+          const html = md.render(src, env)
+          if (env.frontmatter?.search === false) return ''
+          return env.frontmatter?.title ? md.render('# ' + env.frontmatter?.title) + html : html
+        },
+      },
+    },
     footer: themeConfig.footer
   },
   srcExclude: ['README.md', 'README_CH.md', 'CHANGELOG.md'],

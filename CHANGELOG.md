@@ -1,8 +1,15 @@
+# 2023-10-19
+
+### Features
+- bump to vitepress@1.0.0-rc.22
+- [local search optimization](https://github.com/vuejs/vitepress/pull/2770#issuecomment-1685380396)
+- using \<span\> as pagination buttons instead of \<a\>
+
 # 2023-10-17
 
 ### Bug Fixes
 
-- wrong base url with History API call
+- history call without withBase() lead to wrong index
 
 # 2023-10-15
 

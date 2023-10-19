@@ -1,9 +1,8 @@
 <script setup lang='ts'>
+import { withBase } from 'vitepress'
 import { initArchives } from '../utils'
 import { data as posts } from '../posts.data'
-import themeConfig from '../config'
 
-const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
 const archives = initArchives(posts)
 const years = Object.keys(archives).sort().reverse()
 </script>
@@ -16,7 +15,7 @@ const years = Object.keys(archives).sort().reverse()
     <dl v-for='year in years'>
       <h3 class='pb-2 text-xl font-extrabold'>{{ year }}</h3>
       <a v-for='post in archives[year]' target="_blank" 
-        class='decoration-2 hover:underline' :href='root + post.url'>
+        class='decoration-2 hover:underline' :href='withBase(post.url)'>
         <dd class='flex justify-between my-3 text-base leading-6 font-medium 
           text-gray-500 dark:text-gray-300'>
           <div class='truncate w-64 sm:w-fit'>{{ post.title }}</div>
