@@ -1,6 +1,6 @@
 ![](https://img.shields.io/github/license/laplacetw/vitepress-theme-trigger)
 ![Node.js >= 18.0.0](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)
-![VitePress 1.0.0.rc14](https://img.shields.io/badge/VitePress-1.0.0_rc.14-green)
+![VitePress 1.0.0.rc22](https://img.shields.io/badge/VitePress-1.0.0_rc.22-green)
 
 # vitepress-theme-trigger
 Blog theme for [VitePress](https://vitepress.dev) with [Tailwind CSS](https://tailwindcss.com).
@@ -36,7 +36,7 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 
 ## Usage
 - Clone the project.
-- Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for personal use.
+- Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for custom.
   - [VitePress Doc - Site Config](https://vitepress.dev/reference/site-config#site-config)
 - Start terminal and execute commands as follows :
 ```shell
