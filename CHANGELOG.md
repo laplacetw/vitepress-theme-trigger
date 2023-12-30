@@ -1,3 +1,15 @@
+# 2023-12-30
+
+### Features
+- bump to vitepress@1.0.0-rc.33
+- bump to postcss@8.4.32
+- add description to subpages
+
+# 2023-11-11
+
+### Features
+- bump to vitepress@1.0.0-rc.25
+
 # 2023-10-19
 
 ### Features
