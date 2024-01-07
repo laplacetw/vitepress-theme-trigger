@@ -1,3 +1,9 @@
+# 2024-01-07
+
+### Features
+- bump to vitepress@1.0.0-rc.35
+- add [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
+
 # 2023-12-30
 
 ### Features

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import themeConfig from './theme/config'
+import mdFootnote from 'markdown-it-footnote'
 
 const root = themeConfig.base ? themeConfig.base.slice(0, -1) : ''
 
@@ -39,6 +40,9 @@ export default defineConfig({
   markdown: {
     math: themeConfig.mdMath,
     lineNumbers: themeConfig.mdLineNums,
+    config: (md) => {
+      md.use(mdFootnote)
+    },
   },
   sitemap: {
     hostname: themeConfig.hostname
