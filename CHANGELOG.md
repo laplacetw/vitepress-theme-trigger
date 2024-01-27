@@ -1,3 +1,8 @@
+# 2024-01-27
+
+### Features
+- bump to vitepress@1.0.0-rc.40
+
 # 2024-01-07
 
 ### Features
