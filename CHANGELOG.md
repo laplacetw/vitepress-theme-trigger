@@ -1,3 +1,10 @@
+# 2024-02-24
+
+### Features
+- bump to vitepress@1.0.0-rc.44
+
+Note: there are [breaking changes of 1.0.0-rc.41 & 1.0.0-rc.43](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md)
+
 # 2024-01-27
 
 ### Features
