@@ -5,6 +5,9 @@
 
 Note: there are [breaking changes of 1.0.0-rc.41 & 1.0.0-rc.43](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md)
 
+### Bug Fixes
+- wrong datetime of new post template
+
 # 2024-01-27
 
 ### Features

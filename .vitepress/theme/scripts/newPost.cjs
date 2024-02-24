@@ -12,7 +12,7 @@ const title = `${filename.charAt(0).toUpperCase()}${filename
   .replaceAll('-', ' ')
   .slice(1)}`;
 const date = new Date().toJSON().slice(0, 10);
-const time = new Date().toLocaleTimeString().slice(2, 7);
+const time = new Date().toLocaleTimeString('en-US', { hourCycle: 'h23'});
 const markdown = `---
 date: ${date} ${time}
 title: ${title}
