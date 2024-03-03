@@ -39,8 +39,7 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 ## Usage
 - Clone the project.
 - Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for custom.
-  - [VitePress Doc - Site Config](https://vitepress.dev/reference/site-config#site-config)
-- Start terminal and execute commands as follows :
+- Launch terminal and execute commands as follows :
 ```shell
 # install devDependencies
 (p)npm install

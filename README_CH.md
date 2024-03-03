@@ -38,7 +38,6 @@
 ## 如何使用
 - 複製或下載本主題
 - 根據個人需求編輯 [theme config](/.vitepress/theme/config.ts) 和 [public 資料夾](/public/)中的檔案
-  - [VitePress Doc - Site Config](https://vitepress.dev/reference/site-config#site-config)
 - 啟動終端機執行以下指令 :
 ```shell
 # 安裝依賴套件
