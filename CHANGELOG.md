@@ -1,3 +1,8 @@
+# 2024-03-26
+
+### Features
+- bump to vitepress@1.0.1
+
 # 2024-02-24
 
 ### Features
