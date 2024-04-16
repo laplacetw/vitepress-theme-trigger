@@ -1,3 +1,9 @@
+# 2024-04-16
+
+### Features
+- bump to vitepress@1.1.0
+- add JSON-LD for SEO
+
 # 2024-03-26
 
 ### Features
