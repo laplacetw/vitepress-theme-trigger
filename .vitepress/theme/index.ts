@@ -22,12 +22,6 @@ export default {
     app.component('About', About)
 
     // https://github.com/vuejs/vitepress/issues/3100
-    router.onBeforeRouteChange = () => {
-      const jsonLdId = 'postJsonLd'
-      const jsonLd = document.getElementById(jsonLdId)
-      if (jsonLd) {
-        jsonLd.parentNode?.removeChild(jsonLd)
-      }
-    }
+    // router.onBeforeRouteChange = () => {}
   }
 }
