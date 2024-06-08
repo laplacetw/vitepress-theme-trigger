@@ -1,3 +1,9 @@
+# 2024-06-09
+
+### Features
+- bump to vitepress@1.2.3
+- remove styles of MathJax style optimization for mobile ([#3914](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325))
+
 # 2024-04-16
 
 ### Features
