@@ -1,6 +1,6 @@
 ![](https://img.shields.io/github/license/laplacetw/vitepress-theme-trigger)
 ![Node.js >= 18.0.0](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)
-![VitePress 1.1.0](https://img.shields.io/badge/VitePress-1.1.0-green)
+![VitePress 1.2.3](https://img.shields.io/badge/VitePress-1.2.3-green)
 
 # vitepress-theme-trigger
 為建立部落格而生的 [VitePress](https://vitepress.dev) + [Tailwind CSS](https://tailwindcss.com) 主題
@@ -21,6 +21,7 @@
 
 ## 主題特色
 - 透過終端機指令建立新文章
+- 文章頁面使用 JSON-LD 改進 SEO
 - Tailwind CSS (響應式)
 - 淺色 / 深色主題切換
 - 文章列表分頁使用 History API
@@ -28,7 +29,7 @@
 - 整合常用網站 / 主題設定
 - 使用 [utterances](https://utteranc.es) 留言系統
 - utterances 同步切換淺色 / 深色主題
-- 針對行動裝置瀏覽改善 MathJax 樣式
+- [針對行動裝置瀏覽改善 MathJax 樣式](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325)
 - 自動產生上一篇 / 下一篇連結(無需手動設定)
 - 整合 [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote) 腳註支援
 

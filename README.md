@@ -1,6 +1,6 @@
 ![](https://img.shields.io/github/license/laplacetw/vitepress-theme-trigger)
 ![Node.js >= 18.0.0](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)
-![VitePress 1.1.0](https://img.shields.io/badge/VitePress-1.1.0-green)
+![VitePress 1.2.3](https://img.shields.io/badge/VitePress-1.2.3-green)
 
 # vitepress-theme-trigger
 Blog theme for [VitePress](https://vitepress.dev) with [Tailwind CSS](https://tailwindcss.com).
@@ -22,6 +22,7 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 
 ## Features
 - create new post with CLI
+- add JSON-LD for SEO on post pages
 - style with Tailwind CSS (RWD)
 - style for light / dark mode
 - pagination with History API
@@ -29,7 +30,7 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 - common use config integration
 - [utterances](https://utteranc.es) for blog comments
 - sync light / dark mode for utterances
-- MathJax style optimization for mobile
+- [MathJax style optimization for mobile](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325)
 - prev / next links without fontmatter setting
 - support footnote by [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
 

@@ -1,3 +1,17 @@
+# 2024-09-08
+
+### Features
+- bump to vitepress@1.3.4
+
+### Bug Fixes
+- wrong link of post info
+
+# 2024-06-09
+
+### Features
+- bump to vitepress@1.2.3
+- remove styles of MathJax style optimization for mobile ([#3914](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325))
+
 # 2024-04-16
 
 ### Features
@@ -52,42 +66,35 @@ Note: there are [breaking changes of 1.0.0-rc.41 & 1.0.0-rc.43](https://github.c
 # 2023-10-17
 
 ### Bug Fixes
-
 - history call without withBase() lead to wrong index
 
 # 2023-10-15
 
 ### Bug Fixes
-
 - wrong link of post tags due to siteConfig.base
 
 # 2023-10-14
 
 ### Bug Fixes
-
 - url error with siteConfig.base
 
 # 2023-10-13
 
 ### Features
-
 - add workflow for deploy to GitHub pages
 
 # 2023-10-04
 
 ### Features
-
 - add script for create new post
 
 # 2023-10-01
 
 ### Features
-
 - truncate excerpt
 - optimize style of category / tag
 
 # 2023-09-28
 
 ### Bug Fixes
-
 - hide prev / next at latest / oldest post

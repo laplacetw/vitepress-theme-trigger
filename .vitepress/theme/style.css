@@ -56,14 +56,6 @@
   @apply px-1 py-5 !important;
 }
 
-mjx-container[style*="display: block;"] {
-  @apply overflow-x-auto overflow-y-hidden;
-}
-
-mjx-container > svg {
-  @apply inline-block;
-}
-
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
