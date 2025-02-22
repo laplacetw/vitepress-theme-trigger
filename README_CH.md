@@ -1,6 +1,6 @@
 ![](https://img.shields.io/github/license/laplacetw/vitepress-theme-trigger)
 ![Node.js >= 18.0.0](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)
-![VitePress 1.5.0](https://img.shields.io/badge/VitePress-1.5.0-green)
+![VitePress 1.6.3](https://img.shields.io/badge/VitePress-1.6.3-green)
 
 # vitepress-theme-trigger
 為建立部落格而生的 [VitePress](https://vitepress.dev) + [Tailwind CSS](https://tailwindcss.com) 主題
