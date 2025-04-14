@@ -58,7 +58,8 @@ const themeConfig = {
     issueTerm: 'title',
     light: 'github-light',
     dark: 'gruvbox-dark'
-  }
+  },
+  cloudflareApi: ''
 }
 
 export default themeConfig

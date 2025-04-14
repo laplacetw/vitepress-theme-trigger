@@ -24,6 +24,19 @@
   rounded-md ring-1 ring-cyan-500 animate-pulse;
 }
 
+.theme-summary {
+  @apply border-2 border-dashed border-gray-400 dark:border-gray-600 
+  p-4 min-h-[120px] flex items-center justify-center text-gray-700 dark:text-gray-300;
+}
+
+.theme-summary-button {
+  @apply bg-yellow-500 text-black text-black font-bold py-2 px-4 rounded-lg;
+}
+
+.theme-summary-dot {
+  @apply w-2 h-2 bg-current rounded-full
+}
+
 .theme-pagination {
   @apply flex items-center justify-center px-3 h-8 leading-tight cursor-pointer
   text-cyan-700 border border-gray-300 sm:hover:bg-gray-300 sm:hover:text-cyan-500 

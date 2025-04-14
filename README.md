@@ -21,18 +21,18 @@ If there has any problem please feel free to create issue.
 Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 
 ## Features
-- create new post with CLI
-- add JSON-LD for SEO on post pages
-- style with Tailwind CSS (RWD)
-- style for light / dark mode
-- pagination with History API
-- [built-in sitemap generation](https://vitepress.dev/guide/sitemap-generation#sitemap-generation)
-- common use config integration
-- [utterances](https://utteranc.es) for blog comments
-- sync light / dark mode for utterances
-- [MathJax style optimization for mobile](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325)
-- prev / next links without fontmatter setting
-- support footnote by [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
+- 🖋️ **Generate new posts via CLI** – Scaffold articles instantly with a single command
+- 🤖 **AI-powered summary** – Real-time article overview powered by AI
+- 📈 **SEO-ready with JSON-LD** – Auto-injected schema data on every post page
+- 🎨 **Style with Tailwind CSS** – Responsive design that looks great in both light/dark mode
+- 📚 **Pagination powered by History API** – Smooth navigation between post lists
+- 🗺️ [**Automatic sitemap generation**](https://vitepress.dev/guide/sitemap-generation#sitemap-generation) – Boost your site's visibility in search engines
+- 🧩 **Modular config integration** – Centralized control for site and theme settings
+- 💬 [**Utterances for comments**](https://utteranc.es) – GitHub-powered commenting system
+- 🔄 **Theme-aware Utterances** – Auto-sync comment box with light/dark mode
+- 📐 [**Optimized MathJax rendering**](https://github.com/vuejs/vitepress/issues/3914#issuecomment-2138527325) – Clean, responsive math formulas on mobile
+- ⏭️ **Prev/Next post links** – Auto-generated without extra frontmatter
+- 🦶 **Footnote support** – Powered by [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote) for scholarly notes
 
 ## Prerequisite
 - [Node.js](https://nodejs.org) version 18 or higher.
@@ -40,6 +40,66 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 ## Usage
 - Clone the project.
 - Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for custom.
+- To enable the AI-powered realtime summary, you need to sign up for [Cloudflare](https://www.cloudflare.com), create your own AI Worker (free), and configure the Worker API in the theme config.
+```
+# worker.js
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'YOUR_HOST',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json'
+};
+
+const sendErrorResponse = (message, status = 500) => {
+  return new Response(JSON.stringify({ error: message }), {
+    status,
+    headers: corsHeaders
+  });
+};
+
+export default {
+  async fetch(request, env) {
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { headers: corsHeaders });
+    }
+
+    if (request.method !== 'POST') {
+      return sendErrorResponse('Only POST requests are allowed', 405);
+    }
+
+    try {
+      const { message } = await request.json();
+      if (!message) {
+        return sendErrorResponse('Missing message in request body', 400);
+      }
+      const model = '@cf/meta/llama-3.1-8b-instruct';
+      const userID = 'YOUR_USER_ID';
+      const gateway = `https://gateway.ai.cloudflare.com/v1/${userID}/ai-gateway/workers-ai/${model}`;
+      const prompt = `You are a professional summarization assistant. Based on the content I provide, generate a summary no longer than 60 characters, and return only the summary—no additional text: ${message}`;
+      const apiResponse = await fetch(
+        gateway,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${env.key}`
+          },
+          body: JSON.stringify({'prompt': prompt})
+        }
+      );
+
+      if (!apiResponse.ok) {
+        throw new Error(`Cloudflare Workers AI error: ${apiResponse.statusText}`);
+      }
+
+      const response = await apiResponse.json();
+      return new Response(JSON.stringify({ response }), { headers: corsHeaders });
+    } catch (error) {
+      return sendErrorResponse(error.message);
+    }
+  }
+};
+```
 - Launch terminal and execute commands as follows :
 ```shell
 # install devDependencies
