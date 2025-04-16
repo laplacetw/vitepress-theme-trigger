@@ -40,7 +40,7 @@ Detailed changes are documented in the [CHANGELOG](./CHANGELOG.md).
 ## Usage
 - Clone the project.
 - Edit [theme config](/.vitepress/theme/config.ts) and [public files](/public/) for custom.
-- To enable the AI-powered realtime summary, you need to sign up for [Cloudflare](https://www.cloudflare.com), create your own AI Worker (free), and configure the Worker API in the theme config.
+- To enable the AI-powered realtime summary, you need to sign up for [Cloudflare](https://www.cloudflare.com), create your own AI Worker (free) and AI Gateway (traffic control), and configure the Worker API in the theme config.
 ```
 # worker.js
 const corsHeaders = {
@@ -74,7 +74,8 @@ export default {
       }
       const model = '@cf/meta/llama-3.1-8b-instruct';
       const userID = 'YOUR_USER_ID';
-      const gateway = `https://gateway.ai.cloudflare.com/v1/${userID}/ai-gateway/workers-ai/${model}`;
+      const gatewayID = 'YOUR_AI_GATEWAY_NAME'
+      const gateway = `https://gateway.ai.cloudflare.com/v1/${userID}/{gatewayID}/workers-ai/${model}`;
       const prompt = `You are a professional summarization assistant. Based on the content I provide, generate a summary no longer than 60 characters, and return only the summary—no additional text: ${message}`;
       const apiResponse = await fetch(
         gateway,

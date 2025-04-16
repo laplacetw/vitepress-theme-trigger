@@ -39,7 +39,7 @@
 ## 如何使用
 - 複製或下載本主題
 - 根據個人需求編輯 [theme config](/.vitepress/theme/config.ts) 和 [public 資料夾](/public/)中的檔案
-- 若要啟用AI即時摘要，必須註冊[Cloudflare](https://www.cloudflare.com)並建立你的AI Worker (提供免費額度)，再將Worker API填入主題設定
+- 若要啟用AI即時摘要，必須註冊[Cloudflare](https://www.cloudflare.com)並建立你的AI Worker (提供免費額度)和AI Gateway (流量管理)，再將Worker API填入主題設定
 ```
 # worker.js
 const corsHeaders = {
@@ -73,7 +73,8 @@ export default {
       }
       const model = '@cf/meta/llama-3.1-8b-instruct';
       const userID = 'YOUR_USER_ID';
-      const gateway = `https://gateway.ai.cloudflare.com/v1/${userID}/ai-gateway/workers-ai/${model}`;
+      const gatewayID = 'YOUR_AI_GATEWAY_NAME'
+      const gateway = `https://gateway.ai.cloudflare.com/v1/${userID}/{gatewayID}/workers-ai/${model}`;
       const prompt = `你是一個專業的摘要助手，請根據我提供的內容，生成不超過60字的繁體中文摘要，並且只回傳摘要，不得包含其他內容: ${message}`;
       const apiResponse = await fetch(
         gateway,
