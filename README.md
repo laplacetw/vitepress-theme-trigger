@@ -131,7 +131,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm use 18
+        - nvm use 20
         - npm install -g pnpm
         - pnpm install --no-frozen-lockfile
     build:
